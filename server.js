@@ -17,6 +17,13 @@ app.get('/backend/:playlist', async (req, res) => {
     } catch(error) {
       console.log(error);
     }
+  } else if(playlist === 'projects') {
+    try {
+      const response = await axios.get(`${YOUTUBE_PLAYLIST_ENDPOINT}&part=snippet&playlistId=PLGYCCr2uMxfVkjtUwF9vw_q6b98DzMVkI&maxResults=50`);
+      res.json(response.data);
+    } catch(error) {
+      console.log(error);
+    }
   }
 })
 

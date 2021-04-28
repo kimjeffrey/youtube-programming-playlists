@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import VideoPanel from './VideoPanel'
 
-export default function ReactPL() {
+export default function ProjectPL() {
   const [playlist, setPlaylist] = useState([]);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function ReactPL() {
   }, [])
 
   async function getPlaylist() {
-    const res = await fetch('/backend/react');
+    const res = await fetch('/backend/projects');
     const data = await res.json();
 
     return data.items;
@@ -19,7 +19,7 @@ export default function ReactPL() {
 
   return (
     <div className="video-grid">
-      <h1>React Playlist</h1>
+      <h1>Project Ideas Playlist</h1>
       {playlist.map(item => (
         <VideoPanel key={item.etag} title={item.snippet.title} image={item.snippet.thumbnails.medium.url} videoId={item.snippet.resourceId.videoId} />
       ))}

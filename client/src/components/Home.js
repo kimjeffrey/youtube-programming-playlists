@@ -6,6 +6,7 @@ export default function Home() {
     <div className="home">
       <h1>My App</h1> 
       <div><Link to="/react">React</Link></div>
+      <div><Link to="/projects">Project Ideas</Link></div>
     </div>
   )
 }
