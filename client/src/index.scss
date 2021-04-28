@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.video-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+  .video-panel {
+    width: 300px;
+    text-align: center;
+    padding: 30px 5px;
+    border-radius: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    &:hover {
+      box-shadow: 2px 2px 4px 4px #ccc;
+      cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      img {
+        width: 280px;
+      }
+    }
+  }
+}

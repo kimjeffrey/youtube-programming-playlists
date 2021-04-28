@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import VideoPanel from './VideoPanel'
 
 export default function ReactPL() {
   const [playlist, setPlaylist] = useState([]);
@@ -18,8 +19,11 @@ export default function ReactPL() {
   }
 
   return (
-    <div>
-      <h1>{playlist.length > 0 && 'success'}</h1>
+    <div className="video-grid">
+      <h1>React Playlist</h1>
+      {playlist.map(item => (
+        <VideoPanel key={item.etag} title={item.snippet.title} image={item.snippet.thumbnails.medium.url} videoId={item.snippet.resourceId.videoId} />
+      ))}
     </div>
   )
 }

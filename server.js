@@ -12,7 +12,7 @@ app.get('/backend/:playlist', async (req, res) => {
 
   if(playlist === 'react') {
     try {
-      const response = await axios.get(`${YOUTUBE_PLAYLIST_ENDPOINT}&part=snippet&playistId=PLGYCCr2uMxfUzajLjrdIjINR8HIqfTrxT&maxResults=50`);
+      const response = await axios.get(`${YOUTUBE_PLAYLIST_ENDPOINT}&part=snippet&playlistId=PLGYCCr2uMxfUzajLjrdIjINR8HIqfTrxT&maxResults=50`);
       res.json(response.data);
     } catch(error) {
       console.log(error);
