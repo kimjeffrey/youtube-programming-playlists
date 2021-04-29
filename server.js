@@ -24,6 +24,13 @@ app.get('/backend/:playlist', async (req, res) => {
     } catch(error) {
       console.log(error);
     }
+  } else if(playlist === 'nodejs') {
+    try {
+      const response = await axios.get(`${YOUTUBE_PLAYLIST_ENDPOINT}&part=snippet&playlistId=PLGYCCr2uMxfUA1T7p1-C26mGusGAJauM5&maxResults=50`);
+      res.json(response.data);
+    } catch(error) {
+      console.log(error);
+    }
   }
 })
 

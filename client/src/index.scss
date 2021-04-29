@@ -30,6 +30,7 @@ code {
   .topic-grid {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
     .topic {
       border-radius: 35px;

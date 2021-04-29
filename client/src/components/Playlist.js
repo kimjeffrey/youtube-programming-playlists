@@ -15,10 +15,10 @@ export default function ReactPL() {
 
   useEffect(() => {
     if(topic) {
-      if(topic === 'react') {
-        setPlaylistName('React');
-      } else if(topic === 'projects') {
+      if(topic === 'projects') {
         setPlaylistName('Project Ideas');
+      } else {
+        setPlaylistName(topic.charAt(0).toUpperCase() + topic.slice(1));
       }
     }
   }, [topic])
